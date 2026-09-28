@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trevos Watch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       LOGIN SCREEN
+  ========================== -->
+
+  <div id="loginScreen" class="login-screen">
+
+    <div class="login-box">
+
+      <div class="brand-mark">TW</div>
+
+      <h1>Trevos Watch</h1>
+
+      <p class="login-subtitle">
+        Securely manage your products and expiry dates.
+      </p>
+
+      <label for="loginPassword">Password</label>
+
+      <input
+        id="loginPassword"
+        type="password"
+        placeholder="Enter your password"
+        autocomplete="current-password"
+      >
+
+      <button class="primary-button login-button" onclick="login()">
+        Unlock Trevos Watch
+      </button>
+
+      <button class="link-button" onclick="showReset()">
+        Forgot Password?
+      </button>
+
+      <p id="loginError" class="form-error"></p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       PASSWORD RECOVERY
+  ========================== -->
+
+  <div id="resetScreen" class="login-screen" style="display:none;">
+
+    <div class="login-box">
+
+      <div class="brand-mark">TW</div>
+
+      <h2>Password Recovery</h2>
+
+      <p id="question" class="login-subtitle">
+        Answer your security question.
+      </p>
+
+      <input
+        id="answer"
+        type="text"
+        placeholder="Enter your answer"
+      >
+
+      <button class="primary-button" onclick="verifyAnswer()">
+        Verify Answer
+      </button>
+
+      <button class="secondary-button" onclick="backToLogin()">
+        Back to Login
+      </button>
+
+      <p id="resetError" class="form-error"></p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       MAIN APPLICATION
+  ========================== -->
+
+  <div class="app-container" id="app" style="display:none;">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <div class="sidebar-brand">
+
+        <div class="sidebar-logo">TW</div>
+
+        <div>
+          <h2 id="sidebarAppName">Trevos Watch</h2>
+          <span>Expiry Management</span>
+        </div>
+
+      </div>
+
+
+      <nav class="sidebar-nav">
+
+        <button
+          class="nav-item active"
+          id="navWelcome"
+          onclick="loadWelcome()"
+        >
+          <span class="nav-icon">⌂</span>
+          <span>Welcome</span>
+        </button>
+
+        <button
+          class="nav-item"
+          id="navInbound"
+          onclick="loadInbound()"
+        >
+          <span class="nav-icon">↓</span>
+          <span>Inbound</span>
+        </button>
+
+        <button
+          class="nav-item"
+          id="navOutbound"
+          onclick="loadOutbound()"
+        >
+          <span class="nav-icon">↑</span>
+          <span>Outbound</span>
+        </button>
+
+        <button
+          class="nav-item"
+          id="navSettings"
+          onclick="loadSettings()"
+        >
+          <span class="nav-icon">⚙</span>
+          <span>Settings</span>
+        </button>
+
+      </nav>
+
+
+      <div class="sidebar-footer">
+
+        <div class="user-mini">
+
+          <div class="user-avatar" id="userAvatar">
+            U
+          </div>
+
+          <div>
+            <strong id="sidebarUserName">User</strong>
+            <span>Administrator</span>
+          </div>
+
+        </div>
+
+        <button class="logout-button" onclick="logout()">
+          Logout
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+      <header class="topbar">
+
+        <div>
+          <span class="page-label">TREVOS WATCH</span>
+          <h1 id="pageTitle">Welcome</h1>
+        </div>
+
+        <div class="topbar-user">
+          <span id="currentDate"></span>
+        </div>
+
+      </header>
+
+
+      <section id="content" class="content-area">
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>

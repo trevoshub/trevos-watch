@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Trevos Watch Notification</title>
+
+  <link
+    rel="stylesheet"
+    href="notification.css"
+  >
+</head>
+
+<body>
+
+  <main
+    id="notificationScreen"
+    class="notification-screen"
+  >
+
+    <div class="notification-card">
+
+      <div
+        id="notificationIcon"
+        class="notification-icon"
+      >
+        !
+      </div>
+
+      <div
+        id="notificationLevel"
+        class="notification-level"
+      >
+        TREvos WATCH
+      </div>
+
+      <h1 id="notificationTitle">
+        Notification
+      </h1>
+
+      <h2 id="productName">
+        Product
+      </h2>
+
+      <div class="notification-details">
+
+        <div class="detail-item">
+
+          <span>Invoice</span>
+
+          <strong id="invoice">
+            —
+          </strong>
+
+        </div>
+
+        <div class="detail-item">
+
+          <span>Expiry Date</span>
+
+          <strong id="expiryDate">
+            —
+          </strong>
+
+        </div>
+
+      </div>
+
+      <p
+        id="notificationMessage"
+        class="notification-message"
+      >
+        Please review this product.
+      </p>
+
+      <button
+        id="closeNotification"
+        class="close-button"
+      >
+        Close Notification
+      </button>
+
+      <p class="notification-footer">
+        Trevos Watch • Expiry Management
+      </p>
+
+    </div>
+
+  </main>
+
+  <script src="notification.js"></script>
+
+</body>
+</html>
